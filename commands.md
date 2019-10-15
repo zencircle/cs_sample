@@ -7,7 +7,7 @@ NODETOOL=`find /var/lib/mesos/slave/slaves -name nodetool | grep -v javadoc | he
 $CQLSH -u XXX -p XXX $NODEIP  9042 --cqlversion="3.4.4" < schema2.cql
 COPY sales2.records (Region,Product,Date,Sales) FROM 'Data_1.csv' WITH DELIMITER=',' AND HEADER=TRUE;
 ```
-#row count from csv
+#### row count from csv
 ```
 wc Data_1.csv 
   2500001   5000001 114096667 Data_1.csv
