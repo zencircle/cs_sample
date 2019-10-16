@@ -11,7 +11,8 @@ CQLSH=`find /var/lib/mesos/slave/slaves -name cqlsh | grep -v javadoc | head -n1
 NODETOOL=`find /var/lib/mesos/slave/slaves -name nodetool | grep -v javadoc | head -n1`
 
 $CQLSH -u XXX -p XXX $NODEIP  9042 --cqlversion="3.4.4" < schema2.cql
-COPY sales2.records (Region,Product,Date,Sales) FROM 'Data_1.csv' WITH DELIMITER=',' AND HEADER=TRUE;
+#COPY sales2.records (Region,Product,Date,Sales) FROM 'Data_1.csv' WITH DELIMITER=',' AND HEADER=TRUE;
+$CQLSH -u XXX -p XXX $NODEIP  9042 --cqlversion="3.4.4" < load.cql
 ```
 #### row count from csv
 ```
